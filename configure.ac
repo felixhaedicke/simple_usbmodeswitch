@@ -1,0 +1,7 @@
+AC_INIT([simple_usbmodeswitch], 1.0)
+AM_INIT_AUTOMAKE
+AC_PROG_CC
+PKG_CHECK_MODULES(LIBUSB, libusb-1.0)
+AC_CONFIG_FILES(Makefile)
+AC_OUTPUT
+

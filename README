@@ -1,0 +1,13 @@
+simple_usbmodeswitch
+
+Simple USB mode switcher for switching Huawei Hi-Link devices from its default
+mass storage mode to network device mode.
+
+It is a lightweight, alternative for usb_modeswitch without any configuration
+files, but for Huawei devices with USB vendor id 12d1 and product id 1f01 only.
+Use usb_modeswitch, if you need to perform mode switching for other devices.
+http://www.draisberghof.de/usb_modeswitch
+
+You might want to add a udev rule like this to perform mode switching when a
+supported device is plugged in:
+ACTION=="add", SUBSYSTEM=="usb", ATTRS{idVendor}=="12d1", ATTRS{idProduct}=="1f01", RUN+="/usr/bin/simple_modeswitch"
